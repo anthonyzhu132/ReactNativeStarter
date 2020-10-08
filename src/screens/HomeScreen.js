@@ -6,7 +6,7 @@ const HomeScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  text: {
+  textStyle: {
     fontSize: 30
   }
 });

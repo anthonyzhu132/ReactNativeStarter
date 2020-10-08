@@ -1,15 +1,14 @@
-const react = require("react")
-import React from 'react';
-import { text, Stylesheet } from 'react-native';
+import React from "react";
+import { Text, StyleSheet } from "react-native";
 
-const ComponentsScreen = () => {
-  return <Text style={styles.textStyle}>ComponentsScreen.js</Text>;
+const ComponentScreen = () => {
+  return <Text style={styles.text}>ComponentScreen Dank</Text>;
 };
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
   textStyle: {
-    fontsize: 30
+    fontSize: 30
   }
-})
+});
 
-export default ComponentsScreen;
+export default ComponentScreen;
