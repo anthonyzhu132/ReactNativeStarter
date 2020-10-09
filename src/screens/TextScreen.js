@@ -3,11 +3,14 @@ import { View, Text, StyleSheet, TextInput } from "react-native";
 
 const TextScreen = () => {
 
+  //Always have state for any text input, never directly inspect Child component from Parent
   const [name, setName] = useState('');
   console.log(name);
 
   return (
     <View>
+      <Text>Enter Name</Text>
+
       <TextInput 
       style={styles.inputStyle}
       autoCapitalize="none" 
@@ -15,6 +18,8 @@ const TextScreen = () => {
       value={name}
       onChangeText={(newText) => setName(newText)}
       />
+
+      <Text>My name is {name}</Text>
     </View>
   );
 };
