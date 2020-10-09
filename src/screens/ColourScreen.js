@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { View, StyleSheet, Button } from "react-native";
+import { View, StyleSheet, Button, FlatList } from "react-native";
 
 const ColourScreen = () => {
 
   const [colour, setColour] = useState([]);
 
+  //On press button changes colour array, ... (Spreads) onto new array
+  //Lists colours out using data from colours, renders each ITEM.
   return (
     <View>
       <Button 
@@ -13,7 +15,14 @@ const ColourScreen = () => {
         setColour([...colour, randomRgb()])
       }}
       />
-      <View style={{ height: 100, width: 100, backgroundColor: randomRgb() }}/>
+
+      <FlatList
+      keyExtractor={(item) => item}
+      data={colour}
+      renderItem={({ item }) => {
+        return <View style={{ height: 100, width: 100, backgroundColor: item }}/>
+      }}
+      />
     </View>
   );
 }
