@@ -7,6 +7,7 @@ const ColourScreen = () => {
 
   //On press button changes colour array, ... (Spreads) onto new array
   //Lists colours out using data from colours, renders each ITEM.
+  
   return (
     <View>
       <Button 
