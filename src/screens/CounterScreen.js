@@ -41,20 +41,3 @@ const CounterScreen = () => {
 const styles = StyleSheet.create({});
 
 export default CounterScreen;
-
-
-// //const reducer = (state, action) => {
-//   //State === {red: number, green: number, blue: number}
-//   //Action === {type: change_red || change_blue || change_green, payload: 15 || -15}
-
-//   switch(action.type) {
-//     case 'change_red':
-//       return state.red + action.payload > 255 || state.red + action.payload < 0 ? state : {...state, red: state.red + action.payload};
-//     case 'change_green':
-//       return state.green + action.payload > 255 || state.green + action.payload < 0 ? state : {...state, green: state.green + action.payload};
-//     case 'change_blue':
-//       return state.blue + action.payload > 255 || state.blue + action.payload < 0 ? state : {...state, blue: state.blue + action.payload};
-//     default:
-//       return state;
-//   }
-// };
