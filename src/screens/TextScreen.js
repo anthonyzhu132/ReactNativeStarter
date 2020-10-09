@@ -4,22 +4,23 @@ import { View, Text, StyleSheet, TextInput } from "react-native";
 const TextScreen = () => {
 
   //Always have state for any text input, never directly inspect Child component from Parent
-  const [name, setName] = useState('');
-  console.log(name);
+  const [password, setPassword] = useState('');
 
   return (
     <View>
-      <Text>Enter Name</Text>
+      <Text>Enter Password</Text>
 
       <TextInput 
       style={styles.inputStyle}
       autoCapitalize="none" 
       autoCorrect={false}
-      value={name}
-      onChangeText={(newText) => setName(newText)}
+      value={password}
+      onChangeText={(newText) => setPassword(newText)}
+      secureTextEntry={true}
       />
 
-      <Text>My name is {name}</Text>
+      {password.length > 5 ? <Text>Good Password brother</Text> : <Text>Password must be longer than 5 Characters</Text>}
+
     </View>
   );
 };
