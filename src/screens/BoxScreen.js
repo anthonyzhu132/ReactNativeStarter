@@ -8,3 +8,7 @@ const BoxScreen = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({ });
+
+export default BoxScreen;
