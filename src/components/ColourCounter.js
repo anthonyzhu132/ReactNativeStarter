@@ -17,6 +17,4 @@ const ColourCounter = ({ colour, onIncrease, onDecrease }) => {
   );
 }
 
-const styles = StyleSheet.create({});
-
 export default ColourCounter;
